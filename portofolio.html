@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Rahma</title>
+    <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Modal base */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal:target {
+      display: flex;
+    }
+    .modal-content {
+      background: #fff;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: zoomIn 0.3s ease;
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    .modal-header h2 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    .close {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #666;
+    }
+    .close:hover {
+      color: red;
+    }
+    .modal-body img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .modal-body p {
+      line-height: 1.6;
+    }
+    /* Tombol LinkedIn */
+    .btn-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #0a66c2;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+      margin: 1rem auto 2rem;
+    }
+    .btn-linkedin:hover {
+      background-color: #004182;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">Rahma</div>
+        <ul>
+          <li><a href="index.html#home">Beranda</a></li>
+          <li><a href="index.html#profile">Profil</a></li>
+          <li><a href="galery.html">Galeri</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="daftarlink.html">Daftar Link</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<main class="portfolio-section">
+  <h1>Portofolio</h1>
+  <p class="lead">Beberapa project yang pernah saya kerjakan.</p>
+
+  <div style="text-align:center;">
+      <a href="https://www.linkedin.com/in/rahma-nur-istiqomah-68b5a8368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn-linkedin">
+        🔗 Lihat Profil LinkedIn
+      </a>
+  </div>
+
+  <div class="portfolio-grid">
+    <!-- Project 1 -->
+    <div class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="img/inputDataSiswa.png" alt="Project 1">
+      </div>
+      <div class="portfolio-content">
+        <h3>Input Data Siswa</h3>
+        <p>Aplikasi ini dibuat menggunakan Kodular sebagai platform pembuat aplikasi tanpa 
+          coding yang berbasis drag-and-drop.</p>
+        <div class="portfolio-buttons">
+          <a href="#modal1" class="btn">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="img/dataBrgHilang.png" alt="Project 2">
+      </div>
+      <div class="portfolio-content">
+        <h3>Pendataan Barang Hilang</h3>
+        <h3>Deskripsi Proyek</h3>
+           <p>Sistem Pendataan Barang Hilang adalah sebuah aplikasi berbasis web yang dirancang 
+            <br>untuk memudahkan pencatatan dan pengelolaan informasi terkait barang yang hilang.</p>
+        <div class="portfolio-buttons">
+          <a href="#modal2" class="btn">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="img/prototypeFigma.png" alt="Project 3">
+      </div>
+      <div class="portfolio-content">
+        <p>Membangun Solusi Efisien dengan Figma Dalam proyek ini.</p>
+        <div class="portfolio-buttons">
+          <a href="#modal3" class="btn">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="img/posRahma.png" alt="Project 2">
+      </div>
+      <div class="portfolio-content">
+        <p>Aplikasi POS sederhana berbasis Laravel & Tailwind CSS.</p>
+        <div class="portfolio-buttons">
+          <a href="#modal4" class="btn">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+
+     <!-- Project 5 -->
+    <div class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="img/laravelRahma.png" alt="Project 2">
+      </div>
+      <div class="portfolio-content">
+         <p>Saya merancang dan mengembangkan Sistem Informasi Barang (SIB) yang efisien, 
+        memanfaatkan Laravel untuk backend yang kuat dan Tailwind CSS untuk frontend 
+        yang modern.</p>
+        <div class="portfolio-buttons">
+          <a href="#modal5" class="btn">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Point of Sale Web App</h2>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+      <img src="img/inputDataSiswa.png" alt="">
+       <p>Aplikasi ini dibuat menggunakan Kodular sebagai platform pembuat aplikasi tanpa 
+          coding yang berbasis drag-and-drop. Fungsi utama dari aplikasi ini adalah untuk 
+          melakukan input data siswa secara praktis dan mudah melalui perangkat Android. 
+          Tampilan aplikasi terdiri dari beberapa form input yang memungkinkan pengguna 
+          memasukkan data penting seperti nama siswa, nomor telepon, dan informasi lainnya. 
+          Desain antarmuka yang sederhana dan user-friendly memudahkan proses pengisian 
+          data tanpa kesulitan. Selain itu, terdapat tombol navigasi "Kembali" untuk
+           kembali ke halaman sebelumnya dan tombol "Simpan" yang berfungsi untuk menyimpan 
+           data yang sudah diinput ke database aplikasi. Dengan aplikasi ini, pengelolaan 
+           data siswa menjadi lebih efisien dan terorganisir, mendukung kebutuhan 
+           administrasi sekolah secara digital.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Pendataan Barang Hilang</h2>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+      <img src="img/dataBrgHilang.png" alt="">
+      <h3>Deskripsi Proyek</h3>
+           <p>Sistem Pendataan Barang Hilang adalah sebuah aplikasi berbasis web yang dirancang untuk memudahkan pencatatan dan pengelolaan informasi terkait barang yang hilang, pelapor, dan penemuan barang. Aplikasi ini bertujuan membantu instansi atau organisasi dalam mengelola data secara efisien, sehingga proses pelacakan barang hilang menjadi lebih cepat dan terorganisir. 
+            <h3>Fitur Utama:</h3>
+            <ul> 
+              <li>Pendataan Barang Hilang Pengguna dapat memasukkan data barang yang hilang lengkap dengan informasi detail seperti kategori barang, deskripsi, dan gambar barang. Ini memudahkan identifikasi barang yang hilang.</li>
+              <li>Data Pelapor Sistem menyimpan data pelapor barang hilang, sehingga memudahkan komunikasi dan tindak lanjut untuk menemukan barang tersebut.</li>
+              <li>Data Penemuan Informasi barang yang ditemukan juga dapat didaftarkan, sehingga dapat dicocokkan dengan laporan barang hilang yang sudah ada.</li>
+              <li>Dashboard Informasi Halaman utama menampilkan ringkasan jumlah barang hilang, jumlah pelapor, dan kategori barang secara visual. Pengguna dapat dengan mudah melihat status terkini melalui tampilan yang bersih dan terstruktur.</li>
+              <li>Kategori Barang Barang hilang diklasifikasikan ke dalam kategori yang jelas seperti Laptop/Elektronik, Gelang/Aksesoris, dan Gantungan Kunci/Aksesoris dengan preview gambar, sehingga memudahkan pencarian dan pengelompokan data. </li>
+              <li>Navigasi Mudah Menu sidebar yang intuitif memungkinkan pengguna mengakses berbagai halaman penting seperti Barang Hilang, Pelapor, Penemuan, dan Logout dengan cepat.</li></p>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal 3 -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Pendataan Barang Hilang</h2>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+      <img src="img/prototypeFigma.png" alt="">
+      <p>Membangun Solusi Efisien dengan Figma Dalam proyek ini, saya merancang sistem pendataan barang 
+          hilang menggunakan Figma, berfokus pada kemudahan penggunaan dan efisiensi alur kerja. Tujuan 
+          utama proyek ini adalah menyediakan platform yang intuitif bagi pengguna untuk melaporkan barang
+          hilang dan bagi administrator untuk mengelola data tersebut secara terpusif. Proses desain 
+          dimulai dengan riset mendalam tentang kebutuhan pengguna dan kendala yang ada pada sistem 
+          pelaporan barang hilang konvensional. Saya kemudian membuat wireframe dan prototype interaktif
+          di Figma, yang memungkinkan pengujian awal alur pengguna dan pengumpulan feedback berulang. 
+          Desain akhir mencakup antarmuka pengguna (UI) yang bersih dan minimalis dengan penekanan pada
+          hierarki informasi yang jelas dan navigasi yang mudah diakses.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Point of Sale Web App</h2>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+      <img src="img/posRahma.png" alt="">
+      <p>Aplikasi POS sederhana berbasis Laravel & Tailwind CSS. Dirancang untuk menyederhanakan
+         dan mengoptimalkan operasi penjualan ritel. Aplikasi ini menyediakan solusi end-to-end
+         untuk manajemen transaksi, inventaris, dan pelanggan, dengan fokus pada efisiensi, 
+         skalabilitas, dan keamanan data. Saya merancang arsitektur aplikasi dengan memanfaatkan 
+         fitur-fitur Laravel seperti Eloquent ORM untuk interaksi basis data yang efisien, 
+         Blade Templating Engine untuk frontend yang dinamis, dan Laravel Mix untuk aset manajemen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Sistem Informasi Barang</h2>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+      <img src="img/laravelRahma.png" alt="">
+      <p>Saya merancang dan mengembangkan Sistem Informasi Barang (SIB) yang efisien, 
+        memanfaatkan Laravel untuk backend yang kuat dan Tailwind CSS untuk frontend 
+        yang modern. SIB ini memungkinkan pengelolaan inventaris real-time dengan fitur 
+        CRUD barang, pencatatan masuk/keluar, dan manajemen stok otomatis. Antarmuka 
+        penggunanya bersih, responsif, dan dibuat dengan pendekatan utility-first dari 
+        Tailwind CSS, memastikan pengalaman yang intuitif di berbagai perangkat. Proyek 
+        ini menampilkan keahlian saya dalam pengembangan full-stack dan pembuatan 
+        aplikasi web yang performatif dengan UI yang menarik.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
